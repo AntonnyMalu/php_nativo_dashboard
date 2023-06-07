@@ -32,7 +32,7 @@ require_once "../vendor/autoload.php";
     <meta name="msapplication-TileImage" content="<?php echo FAVICON_MSAPLICATION ?>">
     <meta name="theme-color" content="#ffffff">
 
-    <title>Concept | Login</title>
+    <title>Concept | Register</title>
 </head>
 
 <style>
@@ -58,44 +58,45 @@ require_once "../vendor/autoload.php";
 
 <body>
     <!-- ============================================================== -->
-    <!-- login page  -->
+    <!-- register page  -->
     <!-- ============================================================== -->
-    <div class="splash-container">
+    <form class="splash-container">
         <div class="card" style="width: 360px;">
-            <div class="card-header text-center"><a href="../web/"><img class="logo-img mb-5" src="../img/images/logo.png" alt="logo">
-                </a><span class="splash-description">
-                    <h2 class="text-primary">Login</h2>
-                </span>
+            <div class="card-header text-center"><a href="../web/"><img class="logo-img" src="../resources/concept/assets/images/logo.png" alt="logo"></a></div>
+            <div class="card-header">
+                <h2 class="mb-1 text-center text-primary">¡Registrate!</h2>
             </div>
             <div class="card-body">
-                <form>
-                    <div class="form-group">
-                        <input class="form-control form-control-lg" id="username" type="text" placeholder="Usuario" autocomplete="off">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control form-control-lg" id="password" type="password" placeholder="Contraseña">
-                    </div>
-                    <!--<div class="form-group">
-                        <label class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox"><span class="custom-control-label">Recuérdame</span>
-                        </label>
-                    </div> -->
-                    <button type="submit" class="btn btn-primary btn-lg btn-block">Iniciar Sesión</button>
-                </form>
+                <div class="form-group">
+                    <input class="form-control form-control-lg" type="text" name="nick" required="" placeholder="Usuario" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <input class="form-control form-control-lg" type="email" name="email" required="" placeholder="Correo" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <input class="form-control form-control-lg" id="pass1" type="password" required="" placeholder="Contraseña">
+                </div>
+                <div class="form-group">
+                    <input class="form-control form-control-lg" required="" placeholder="Confirmar Contraseña">
+                </div>
+                <div class="form-group pt-2">
+                    <button class="btn btn-block btn-primary" type="submit">Registrar</button>
+                </div>
+                <!-- <div class="form-group">
+                    <label class="custom-control custom-checkbox">
+                        <input class="custom-control-input" type="checkbox"><span class="custom-control-label">Al crear una cuenta, usted acepta <a href="#">los términos y condiciones</a></span>
+                    </label>
+                </div> -->
+
             </div>
-            <div class="card-footer p-0 bg-light">
-                <div class="card-footer-item p-0">
-                    <a href="../register/" class="footer-link p-3">Crear una Cuenta</a>
-                </div>
-                <div class="card-footer-item card-footer-item-bordered p-3">
-                    <a href="../recover/" class="footer-link p-0">¿Olvidaste tu contraseña?</a>
-                </div>
+            <div class="card-footer bg-light">
+                <p>¿Ya estas registrado? <a href="../login/" class="text-secondary">Ir al Login.</a></p>
             </div>
         </div>
-    </div>
+    </form>
 
     <!-- ============================================================== -->
-    <!-- end login page  -->
+    <!-- end register page  -->
     <!-- ============================================================== -->
     <!-- Optional JavaScript -->
     <!-- jquery 3.3.1 -->

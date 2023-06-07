@@ -11,7 +11,7 @@
         },
         "files": [
             "funciones/funciones.php",
-            "resources/resources_concept.php"
+            "resources/resources.php"
         ]
     }
 }

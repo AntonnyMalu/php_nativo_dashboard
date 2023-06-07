@@ -14,7 +14,7 @@ require_once "../vendor/autoload.php";
     <link href="<?php echo FONTS_STYLE_CSS ?>" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo LIBS_STYLE_CSS ?>">
     <link rel="stylesheet" href="<?php echo FONTAWESOME_ALL_CSS ?>">
-    <title>Concept - Bootstrap 4 Admin Dashboard Template</title>
+    <title>Concept | Dashboard</title>
 </head>
 
 <body>

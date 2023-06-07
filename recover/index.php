@@ -32,7 +32,7 @@ require_once "../vendor/autoload.php";
     <meta name="msapplication-TileImage" content="<?php echo FAVICON_MSAPLICATION ?>">
     <meta name="theme-color" content="#ffffff">
 
-    <title>Concept | Login</title>
+    <title>Concept | Recuperar</title>
 </head>
 
 <style>
@@ -48,7 +48,7 @@ require_once "../vendor/autoload.php";
         align-items: center;
         padding-top: 40px;
         padding-bottom: 40px;
-        padding-right: 20px;
+        padding-right: 40px;
         background-image: url(../img/img.jpg);
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -58,44 +58,34 @@ require_once "../vendor/autoload.php";
 
 <body>
     <!-- ============================================================== -->
-    <!-- login page  -->
+    <!-- register page  -->
     <!-- ============================================================== -->
-    <div class="splash-container">
-        <div class="card" style="width: 360px;">
-            <div class="card-header text-center"><a href="../web/"><img class="logo-img mb-5" src="../img/images/logo.png" alt="logo">
-                </a><span class="splash-description">
-                    <h2 class="text-primary">Login</h2>
-                </span>
-            </div>
-            <div class="card-body">
-                <form>
-                    <div class="form-group">
-                        <input class="form-control form-control-lg" id="username" type="text" placeholder="Usuario" autocomplete="off">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control form-control-lg" id="password" type="password" placeholder="Contraseña">
-                    </div>
-                    <!--<div class="form-group">
-                        <label class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox"><span class="custom-control-label">Recuérdame</span>
-                        </label>
-                    </div> -->
-                    <button type="submit" class="btn btn-primary btn-lg btn-block">Iniciar Sesión</button>
-                </form>
-            </div>
-            <div class="card-footer p-0 bg-light">
-                <div class="card-footer-item p-0">
-                    <a href="../register/" class="footer-link p-3">Crear una Cuenta</a>
+    <form class="splash-container">
+        <div class="splash-container">
+            <div class="card" style="width: 350px;">
+                <div class="card-header text-center "><a href="../web/"><img class="logo-img mb-5" src="../img/images/logo.png" alt="logo"></a>
+                    <span class="splash-description">
+                        <h2 class="text-primary">Recuperar contraseña</h2>
+                    </span>
                 </div>
-                <div class="card-footer-item card-footer-item-bordered p-3">
-                    <a href="../recover/" class="footer-link p-0">¿Olvidaste tu contraseña?</a>
+                <div class="card-body">
+                    <form>
+                        <p>No te preocupes, te enviaremos un correo electrónico para restablecer tu contraseña.</p>
+                        <div class="form-group">
+                            <input class="form-control form-control-lg" type="email" name="email" required="" placeholder="Ingrese su Correo" autocomplete="off">
+                        </div>
+                        <div class="form-group pt-1"><a class="btn btn-block btn-primary btn-xl" href="../index.html">Restablecer contraseña</a></div>
+                    </form>
+                </div>
+                <div class="card-footer text-center">
+                    <span>¿No estas registrado? <a href="../register/">Registrarme</a></span>
                 </div>
             </div>
         </div>
-    </div>
+    </form>
 
     <!-- ============================================================== -->
-    <!-- end login page  -->
+    <!-- end register page  -->
     <!-- ============================================================== -->
     <!-- Optional JavaScript -->
     <!-- jquery 3.3.1 -->
