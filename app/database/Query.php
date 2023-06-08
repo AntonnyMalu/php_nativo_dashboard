@@ -1,5 +1,5 @@
 <?php
-namespace database;
+namespace app\database;
 use database\Conexion;
 
 class Query extends Conexion

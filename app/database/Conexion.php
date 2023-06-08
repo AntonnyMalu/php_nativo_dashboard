@@ -1,5 +1,5 @@
 <?php
-namespace database;
+namespace app\database;
 use Dotenv\Dotenv;
 use PDO;
 

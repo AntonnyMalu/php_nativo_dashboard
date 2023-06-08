@@ -60,24 +60,26 @@ require_once "../vendor/autoload.php";
     <!-- ============================================================== -->
     <!-- register page  -->
     <!-- ============================================================== -->
-    <form class="splash-container">
+    <form action="procesar.php" method="post" class="splash-container">
+        
         <div class="card" style="width: 360px;">
             <div class="card-header text-center"><a href="../web/"><img class="logo-img" src="../resources/concept/assets/images/logo.png" alt="logo"></a></div>
             <div class="card-header">
                 <h2 class="mb-1 text-center text-primary">¡Registrate!</h2>
             </div>
+           
             <div class="card-body">
                 <div class="form-group">
-                    <input class="form-control form-control-lg" type="text" name="nick" required="" placeholder="Usuario" autocomplete="off">
+                    <input class="form-control form-control-lg" type="text" name="user" required="" placeholder="Usuario" autocomplete="off">
                 </div>
                 <div class="form-group">
-                    <input class="form-control form-control-lg" type="email" name="email" required="" placeholder="Correo" autocomplete="off">
+                    <input class="form-control form-control-lg" type="email" name="email" required="" placeholder="Email" autocomplete="off">
                 </div>
                 <div class="form-group">
-                    <input class="form-control form-control-lg" id="pass1" type="password" required="" placeholder="Contraseña">
+                    <input class="form-control form-control-lg" id="password" name="password" type="password" required="" placeholder="Contraseña">
                 </div>
                 <div class="form-group">
-                    <input class="form-control form-control-lg" required="" placeholder="Confirmar Contraseña">
+                    <input class="form-control form-control-lg" type="password" required="" name="password2" placeholder="Confirmar Contraseña">
                 </div>
                 <div class="form-group pt-2">
                     <button class="btn btn-block btn-primary" type="submit">Registrar</button>

@@ -1,6 +1,6 @@
 <?php
-namespace model;
-use database\Query;
+namespace app\model;
+use app\database\Query;
 class Model
 {
     public $TABLA;

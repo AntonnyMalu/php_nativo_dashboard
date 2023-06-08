@@ -1,6 +1,6 @@
 <?php
-namespace controller;
-use database\Query;
+namespace app\controller;
+use app\database\Query;
 
 class IndexController
 {
