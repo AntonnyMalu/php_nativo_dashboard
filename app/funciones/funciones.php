@@ -94,3 +94,11 @@ function validateJSON(string $json): bool {
 	}
 }
 
+
+/*
+//Comportamiento similar como una redirección HTTP
+window.location.replace ("http://es.stackoverflow.com");
+
+//Comportamiento similar como hacer clic en un enlace
+window.location.href = "http://es.stackoverflow.com";
+*/

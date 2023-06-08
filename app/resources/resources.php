@@ -27,6 +27,7 @@ const JQUERY_MIN_JS = ROOT_PATH.'app\\resources\\concept\\assets\\vendor\\jquery
 const BOOTSTRAP_BUNDLE_JS = ROOT_PATH.'app\\resources\\concept\\assets\\vendor\\bootstrap\\js\\bootstrap.bundle.js';
 const JQUERY_SLIMSCROLL_JS = ROOT_PATH.'app\\resources\\concept\\assets\\vendor\\slimscroll\\jquery.slimscroll.js';
 const MAIN_JS_JS = ROOT_PATH.'app\\resources\\concept\\assets\\libs\\js\\main-js.js';
+const IMPUTMASK = ROOT_PATH.'app\\resources\\concept\\assets\\vendor\\inputmask\\js\\jquery.inputmask.bundle.js';
 
 
 
