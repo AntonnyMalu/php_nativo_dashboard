@@ -1,6 +1,6 @@
 <?php 
 define('ROOT_PATH', url_origin($_SERVER).'\\');
-
+//FAVICON
 const FAVICON_57 = ROOT_PATH.'app\\favicon\\apple-icon-57x57.png';
 const FAVICON_60 = ROOT_PATH.'app\\favicon\\apple-icon-60x60.png';
 const FAVICON_72 = ROOT_PATH.'app\\favicon\\apple-icon-72x72.png';
@@ -18,7 +18,7 @@ const FAVICON_MANIFEST = ROOT_PATH.'app\\favicon\\manifest.json';
 const FAVICON_MSAPLICATION = ROOT_PATH.'app\\favicon\\ms-icon-144x144.png';
 
 
-
+//PLANTILLA CONCEPT
 const BOOTSTRAP_MIN_CSS = ROOT_PATH.'app\\resources\\concept\\assets\\vendor\\bootstrap\\css\\bootstrap.min.css';
 const FONTS_STYLE_CSS = ROOT_PATH.'app\\resources\\concept\\assets\\vendor\\fonts/circular-std\\style.css';
 const LIBS_STYLE_CSS = ROOT_PATH.'app\\resources\\concept\\assets\\libs\\css\\style.css';
@@ -30,7 +30,10 @@ const MAIN_JS_JS = ROOT_PATH.'app\\resources\\concept\\assets\\libs\\js\\main-js
 
 
 
+//SWEETALERT2
 
+const SWEETALERT2_JS = ROOT_PATH.'app\\resources\\sweetalert2\\sweetalert2.all.min.js';
+const SWEETALERT2_APP = ROOT_PATH.'app\\js\\sweetalert-app.js';
 
 
 

@@ -8,20 +8,8 @@
         </div>
         <div class="card-body">
            
-            <form action="../../controller/LoginController.php" method="post">
-                <div class="form-group">
-                    <input class="form-control form-control-lg" type="text" placeholder="Correo"  autocomplete="off" id="email" required>
-                </div>
-                <div class="form-group">
-                    <input class="form-control form-control-lg" id="password" type="password" placeholder="Contraseña" required>
-                </div>
-                <!--<div class="form-group">
-                        <label class="custom-control custom-checkbox">
-                            <input class="custom-control-input" type="checkbox"><span class="custom-control-label">Recuérdame</span>
-                        </label>
-                    </div> -->
-                <button type="submit" class="btn btn-primary btn-lg btn-block">Iniciar Sesión</button>
-            </form>
+            <?php require_once "_layout/form.php"; ?>
+
         </div>
         <div class="card-footer p-0 bg-light">
             <div class="card-footer-item p-0">

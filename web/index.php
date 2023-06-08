@@ -31,10 +31,10 @@ require_once "../vendor/autoload.php";
   <title>Cover</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="_app/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="cover.css" rel="stylesheet">
+  <link href="_app/cover.css" rel="stylesheet">
 </head>
 
 <body class="text-center">
@@ -57,7 +57,7 @@ require_once "../vendor/autoload.php";
          disfrutes navegando y descubriendo todo lo que tengo para ofrecer. Si tienes 
          alguna pregunta o comentario, no dudes en contactarme. ¡Gracias por visitar mi sitio web!</p>
       <p class="lead">
-        <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
+        <a href="#" class="btn btn-lg btn-secondary" id="btn_lear_more">Learn more</a>
       </p>
     </main>
 
@@ -72,12 +72,15 @@ require_once "../vendor/autoload.php";
   <!-- Bootstrap core JavaScript
     ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
-  <script src="bootstrap/js/js/vendor/jquery-slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="_app/bootstrap/js/js/vendor/jquery-slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script>
-    window.jQuery || document.write('<script src="bootstrap/js/js/vendor/jquery-slim.min.js"><\/script>')
+    window.jQuery || document.write('<script src="_app/bootstrap/js/js/vendor/jquery-slim.min.js"><\/script>')
   </script>
-  <script src="bootstrap/js/js/vendor/popper.min.js"></script>
-  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="_app/bootstrap/js/js/vendor/popper.min.js"></script>
+  <script src="_app/bootstrap/js/bootstrap.min.js"></script>
+  <script src="<?php echo SWEETALERT2_JS ?>"></script>
+  <script src="<?php echo SWEETALERT2_APP ?>"></script>
+  <script src="_app/app.js"></script>
 </body>
 
 </html>

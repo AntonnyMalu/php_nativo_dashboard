@@ -72,6 +72,9 @@ $index = new IndexController();
     <script src="<?php echo JQUERY_MIN_JS ?>"></script>
     <!-- bootstap bundle js -->
     <script src="<?php echo BOOTSTRAP_BUNDLE_JS ?>"></script>
+    <script src="<?php echo SWEETALERT2_JS ?>"></script>
+    <script src="<?php echo SWEETALERT2_APP ?>"></script>
+    <script src="_app/app.js"></script>
 </body>
 
 </html>
