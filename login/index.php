@@ -51,7 +51,7 @@ $index = new IndexController();
         padding-top: 40px;
         padding-bottom: 40px;
         padding-right: 20px;
-        background-image: url(../img/img.jpg);
+        background-image: url(../app/img/img.jpg);
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;

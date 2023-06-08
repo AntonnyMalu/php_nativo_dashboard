@@ -1,7 +1,7 @@
 <div class="splash-container">
     
     <div class="card" style="width: 360px;">
-        <div class="card-header text-center"><a href="../web/"><img class="logo-img mb-5" src="../img/images/logo.png" alt="logo">
+        <div class="card-header text-center"><a href="../web/"><img class="logo-img mb-5" src="../app/img/images/logo.png" alt="logo">
             </a><span class="splash-description">
                 <h2 class="text-primary">Login</h2>
             </span>
@@ -10,9 +10,7 @@
            
             <form action="../../controller/LoginController.php" method="post">
                 <div class="form-group">
-                    <input class="form-control form-control-lg" type="text" placeholder="Correo" value="<?php if (isset($_POST['email'])) {
-                                                                                                            echo $_POST['email'];
-                                                                                                        } ?>" autocomplete="off" id="email" required>
+                    <input class="form-control form-control-lg" type="text" placeholder="Correo"  autocomplete="off" id="email" required>
                 </div>
                 <div class="form-group">
                     <input class="form-control form-control-lg" id="password" type="password" placeholder="Contraseña" required>

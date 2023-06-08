@@ -49,7 +49,7 @@ require_once "../vendor/autoload.php";
         padding-top: 40px;
         padding-bottom: 40px;
         padding-right: 40px;
-        background-image: url(../img/img.jpg);
+        background-image: url(../app/img/img.jpg);
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
@@ -63,7 +63,7 @@ require_once "../vendor/autoload.php";
     <form class="splash-container">
         <div class="splash-container">
             <div class="card" style="width: 350px;">
-                <div class="card-header text-center "><a href="../web/"><img class="logo-img mb-5" src="../img/images/logo.png" alt="logo"></a>
+                <div class="card-header text-center "><a href="../web/"><img class="logo-img mb-5" src="../app/img/images/logo.png" alt="logo"></a>
                     <span class="splash-description">
                         <h2 class="text-primary">Recuperar contraseña</h2>
                     </span>
