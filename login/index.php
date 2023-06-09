@@ -1,7 +1,10 @@
 <?php
+session_start();
 require_once "../vendor/autoload.php";
+
+use app\controller\GuestController;
 use app\controller\IndexController;
-$index = new IndexController();
+$index = new GuestController();
 
 ?>
 <!doctype html>

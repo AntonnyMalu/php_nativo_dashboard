@@ -60,29 +60,8 @@ require_once "../vendor/autoload.php";
     <!-- ============================================================== -->
     <!-- register page  -->
     <!-- ============================================================== -->
-    <form class="splash-container">
-        <div class="splash-container">
-            <div class="card" style="width: 350px;">
-                <div class="card-header text-center "><a href="../web/"><img class="logo-img mb-5" src="../app/img/images/logo.png" alt="logo"></a>
-                    <span class="splash-description">
-                        <h2 class="text-primary">Recuperar contraseña</h2>
-                    </span>
-                </div>
-                <div class="card-body">
-                    <form>
-                        <p>No te preocupes, te enviaremos un correo electrónico para restablecer tu contraseña.</p>
-                        <div class="form-group">
-                            <input class="form-control form-control-lg" type="email" name="email" required="" placeholder="Ingrese su Correo" autocomplete="off">
-                        </div>
-                        <div class="form-group pt-1"><a class="btn btn-block btn-primary btn-xl" href="../index.html">Restablecer contraseña</a></div>
-                    </form>
-                </div>
-                <div class="card-footer text-center">
-                    <span>¿No estas registrado? <a href="../register/">Registrarme</a></span>
-                </div>
-            </div>
-        </div>
-    </form>
+   
+    <?php require_once "_layout/content.php"; ?>
 
     <!-- ============================================================== -->
     <!-- end register page  -->

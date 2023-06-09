@@ -7,7 +7,8 @@
         "psr-4": {
             "app\\database\\" : "app\\database",
             "app\\model\\" : "app\\model",
-            "app\\controller\\" : "app\\controller"
+            "app\\controller\\" : "app\\controller",
+            "app\\middleware\\" : "app\\middleware"
         },
         "files": [
             "app/funciones/funciones.php",

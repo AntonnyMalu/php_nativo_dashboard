@@ -1,11 +1,11 @@
-<form method="post" id="from_login">
+<form id="from_login">
     <div class="form-group">
-        <input class="form-control form-control-lg" type="email" placeholder="Correo"  autocomplete="off" id="email" >
+        <input class="form-control form-control-lg" type="email" placeholder="Correo" name="email"  autocomplete="off" id="email" >
         <div class="invalid-feedback" id="error_email"></div>
 
     </div>
     <div class="form-group">
-        <input class="form-control form-control-lg" type="password" placeholder="Contraseña" id="password" >
+        <input class="form-control form-control-lg" type="password" placeholder="Contraseña" name="password" id="password" >
         <div class="invalid-feedback" id="error_password"></div>
     </div>
     <!--<div class="form-group">

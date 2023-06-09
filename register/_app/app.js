@@ -107,6 +107,7 @@ $('#form_register').submit(function (e) {
                             text: data.message
                         });
                     }
+                    
 
                 }
             }

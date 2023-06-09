@@ -1,6 +1,6 @@
 <?php
 namespace app\database;
-use database\Conexion;
+use app\database\Conexion;
 
 class Query extends Conexion
 {

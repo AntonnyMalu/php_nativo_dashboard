@@ -1,5 +1,8 @@
 <?php
+session_start();
 require_once "../vendor/autoload.php";
+use app\controller\WebController;
+$auth = new WebController(true);
 ?>
 
 <!doctype html>
@@ -44,8 +47,13 @@ require_once "../vendor/autoload.php";
       <div class="inner">
         <h3 class="masthead-brand">Home</h3>
         <nav class="nav nav-masthead justify-content-center">
-          <a class="nav-link active" href="../login/">Login</a>
-          <a class="nav-link active" href="../register/">Register</a>
+          <?php if ($auth->USER_NAME) { ?>
+            <a class="nav-link active" href="../dashboard/"><?php echo $auth->USER_NAME; ?></a>
+          <a class="nav-link active" href="../logout/">Cerrar Sesión</a>
+            <?php }else{ ?>
+              <a class="nav-link active" href="../login/">Login</a>
+              <a class="nav-link active" href="../register/">Register</a>
+          <?php } ?>
         </nav>
       </div>
     </header>
