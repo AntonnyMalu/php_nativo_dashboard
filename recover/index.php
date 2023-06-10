@@ -74,6 +74,7 @@ require_once "../vendor/autoload.php";
     <script src="<?php asset('app\\resources\\concept\\assets\\vendor\\bootstrap\\js\\bootstrap.bundle.js') ?>"></script>
     <script src="<?php asset('app\\resources\\sweetalert2\\sweetalert2.all.min.js') ?>"></script>
     <script src="<?php asset('app\\js\\sweetalert-app.js') ?>"></script>
+    <script src="_app/app.js"></script>
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-<form class="splash-container">
+<div class="splash-container">
     <div class="splash-container">
         <div class="card" style="width: 350px;">
             <div class="card-header text-center "><a href="../web/"><img class="logo-img mb-5" src="../app/img/images/logo.png" alt="logo"></a>
@@ -14,4 +14,4 @@
             </div>
         </div>
     </div>
-</form>
+</div>

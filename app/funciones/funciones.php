@@ -8,6 +8,16 @@ function asset($url){
     echo ROOT_PATH. $url;
 }
 
+function generar_string_aleatorio($largo = 10, $espacio = false) {
+    $caracteres = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $caracteres = $espacio ? $caracteres . ' ' : $caracteres;
+    $string = '';
+    for ($i = 0; $i < $largo; $i++) {
+        $string .= $caracteres[rand(0, strlen($caracteres) - 1)];
+    }
+    return $string;
+}
+
 
 //**************************************************************** */
 
