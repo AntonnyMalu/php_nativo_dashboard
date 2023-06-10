@@ -1,3 +1,17 @@
+function showPassword(id_btn, id_input)
+{
+    
+        let tipo = $(id_input).attr('type');
+        if (tipo === "text") {
+            $(id_input).attr('type', 'password');
+            $(id_btn).html('<i class="fas fa-eye"></i>');
+        } else {
+            $(id_input).attr('type', 'text');
+            $(id_btn).html('<i class="fas fa-eye-slash"></i>');
+        }
+    
+}
+
 $('#from_login').submit(function (e) { 
     e.preventDefault();
     let email = $('#email');
