@@ -1,5 +1,9 @@
-<?php 
-define('ROOT_PATH', url_origin($_SERVER).'\\');
+<?php
+use Dotenv\Dotenv;
+$dotenv = Dotenv::createImmutable(dirname(__FILE__,3));
+$dotenv->load();
+
+define('ROOT_PATH', $_ENV['APP_URL']);
 //FAVICON
 const FAVICON_57 = ROOT_PATH.'app\\favicon\\apple-icon-57x57.png';
 const FAVICON_60 = ROOT_PATH.'app\\favicon\\apple-icon-60x60.png';
