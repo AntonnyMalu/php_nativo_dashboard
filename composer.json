@@ -11,8 +11,7 @@
             "app\\middleware\\" : "app\\middleware"
         },
         "files": [
-            "app/funciones/funciones.php",
-            "app/resources/resources.php"
+            "app/funciones/funciones.php"
         ]
     }
 }

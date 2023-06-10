@@ -1,4 +1,15 @@
 <?php
+use Dotenv\Dotenv;
+$dotenv = Dotenv::createImmutable(dirname(__FILE__,3));
+$dotenv->load();
+define('ROOT_PATH', $_ENV['APP_URL']);
+
+function asset($url){
+    echo ROOT_PATH. $url;
+}
+
+
+//**************************************************************** */
 
 function url_origin($s, $use_forwarded_host = false)
 {
