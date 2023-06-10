@@ -33,6 +33,12 @@ $('#form_recover').submit(function (e) {
                     });
                     
                 } else {
+
+                    if (data.error === "no_email") {
+                        email.addClass('is-invalid');
+                        $('#error_email').text(data.message);
+                    }
+                    
                     if (data.alerta) {
                         Alerta.fire({
                             icon: data.icon,
