@@ -6,7 +6,7 @@ use PDO;
 header("Access-Control-Allow-Origin: *");
 date_default_timezone_set('America/Caracas');
 
-$dotenv = Dotenv::createImmutable($_SERVER['DOCUMENT_ROOT']);
+$dotenv = Dotenv::createImmutable(dirname(__FILE__,3));
 $dotenv->load();
 
 class Conexion{
