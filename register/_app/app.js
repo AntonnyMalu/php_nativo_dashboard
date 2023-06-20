@@ -1,3 +1,4 @@
+
 $('#name').inputmask("*{4,20} *{0,20} *{0,20} *{0,20}");
 $('#telefono').inputmask("(9999) 999-99.99");
 
@@ -92,6 +93,7 @@ $('#form_register').submit(function (e) {
                         email.addClass('is-invalid');
                         $('#error_email').text("email ya registrado.");
                     }
+                    
 
                     
 
