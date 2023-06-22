@@ -1,6 +1,6 @@
 <div class="dashboard-header">
     <nav class="navbar navbar-expand-lg bg-white fixed-top">
-        <a class="navbar-brand" href="#">Concept</a>
+        <a class="navbar-brand" href="<?php asset("dashboard/") ?>">Concept</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -97,7 +97,7 @@
                             <h5 class="mb-0 text-white nav-user-name"><?php echo $auth->USER_NAME ?></h5>
                             <span class="status"></span><span class="ml-2"><?php echo $auth->USER_EMAIL ?></span>
                         </div>
-                        <a class="dropdown-item" href="perfil/"><i class="fas fa-user mr-2"></i>Perfil</a>
+                        <a class="dropdown-item" href="<?php asset('dashboard/perfil/') ?>"><i class="fas fa-user mr-2"></i>Perfil</a>
                         <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Ajustes</a>
                         <a class="dropdown-item" href="<?php asset('logout\\') ?>"><i class="fas fa-power-off mr-2"></i>Cerrar sesión</a>
                     </div>

@@ -40,7 +40,7 @@ class Auth
                 $this->USER_ROLE = $getUser['role'];
                 $this->USER_ROLE_ID = $getUser['role_id'];
                 $this->USER_STATUS = $getUser['permisos'];
-                $this->USER_STATUS = $getUser['status'];
+                $this->USER_STATUS = $getUser['estatus'];
                 $this->USER_BAND = $getUser['band'];
                 $this->USER_DISPOSITIVO = $getUser['dispositivo']; 
 

@@ -37,7 +37,7 @@ $auth->isAmdin();
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="<?php asset('app\\favicon\\ms-icon-144x144.png') ?>">
   <meta name="theme-color" content="#ffffff">
-    <title>Concept | Dashboard</title>
+    <title>Concept | Perfil</title>
 </head>
 
 <body>
@@ -48,14 +48,14 @@ $auth->isAmdin();
         <!-- ============================================================== -->
         <!-- navbar -->
         <!-- ============================================================== -->
-        <?php require_once "_layout/navbar.php"; ?>
+        <?php require_once "../_layout/navbar.php"; ?>
         <!-- ============================================================== -->
         <!-- end navbar -->
         <!-- ============================================================== -->
         <!-- ============================================================== -->
         <!-- left sidebar -->
         <!-- ============================================================== -->
-        <?php require_once "_layout/sidebar.php"; ?>
+        <?php require_once "../_layout/sidebar.php"; ?>
         <!-- ============================================================== -->
         <!-- end left sidebar -->
         <!-- ============================================================== -->
