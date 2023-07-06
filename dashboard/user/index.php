@@ -1,13 +1,9 @@
 <?php
 session_start();
 require_once "../../vendor/autoload.php";
-
-use app\controller\DashboardController;
-use app\controller\PerfilController;
-$user = new PerfilController();
-
-$auth = new DashboardController();
-$auth->isAmdin();
+use app\controller\UserController;
+$auth = new UserController();
+$auth->index();
 
 ?>
 <!doctype html>
@@ -23,11 +19,6 @@ $auth->isAmdin();
     <link rel="stylesheet" href="<?php asset('../app\\resources\\concept\\assets\\libs\\css\\style.css') ?>">
     <link rel="stylesheet" href="<?php asset('../app\\resources\\concept\\assets\\vendor\\fonts\\fontawesome\\css\\fontawesome-all.css') ?>">
     <link rel="stylesheet" href="<?php asset('../app/resources/concept/assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css') ?>">
-
-    <link rel="stylesheet" type="text/css" href="<?php asset('../app/resources/concept/assets/vendor/datatables/css/dataTables.bootstrap4.css') ?>">
-    <link rel="stylesheet" type="text/css" href="<?php asset('../app/resources/concept/assets/vendor/datatables/css/buttons.bootstrap4.css') ?>">
-    <link rel="stylesheet" type="text/css" href="<?php asset('../app/resources/concept/assets/vendor/datatables/css/select.bootstrap4.css') ?>">
-    <link rel="stylesheet" type="text/css" href="<?php asset('../app/resources/concept/assets/vendor/datatables/css/fixedHeader.bootstrap4.css') ?>">
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="<?php asset('../app/favicon/apple-icon-57x57.png') ?>">
@@ -103,22 +94,7 @@ $auth->isAmdin();
         <script src="<?php asset('../app\\resources\\concept\\assets\\libs\\js\\main-js.js') ?>"></script>
         <script src="<?php asset('../../app/resources/concept/assets/vendor/inputmask/js/jquery.inputmask.bundle.js') ?>"></script>
         <script src="_app/app.js"></script>
-        <!-- Table -->
-        <script src="<?php asset('../app/resources/concept/assets/vendor/multi-select/js/jquery.multi-select.js') ?>"></script>
-        <script src="<?php asset('../app/resources/concept/assets/vendor/datatables/js/dataTables.bootstrap4.min.js') ?>"></script>
-        <script src="<?php asset('../app/resources/concept/assets/vendor/datatables/js/buttons.bootstrap4.min.js') ?>"></script>
-        <script src="<?php asset('../app/resources/concept/assets/vendor/datatables/js/data-table.js') ?>"></script>
-        <script src="<?php asset('../app/resources/concept/assets/vendor/datatables/js/dataTables.min.js') ?>"></script>
-        <script src="<?php asset('../app/resources/concept/assets/vendor/datatables/js/dataTables.buttons.min.js') ?>"></script>
-        <script src="<?php asset('../app/resources/concept/assets/vendor/datatables/js/jszip.min.js') ?>"></script>
-        <script src="<?php asset('../app/resources/concept/assets/vendor/datatables/js/pdfmake.min.js') ?>"></script>
-        <script src="<?php asset('../app/resources/concept/assets/vendor/datatables/js/vfs_fonts.js') ?>"></script>
-        <script src="<?php asset('../app/resources/concept/assets/vendor/datatables/js/buttons.html5.min.js') ?>"></script>
-        <script src="<?php asset('../app/resources/concept/assets/vendor/datatables/js/buttons.print.min.js') ?>"></script>
-        <script src="<?php asset('../app/resources/concept/assets/vendor/datatables/js/buttons.colVis.min.js') ?>"></script>
-        <script src="<?php asset('../app/resources/concept/assets/vendor/datatables/js/dataTables.rowGroup.min.js') ?>"></script>
-        <script src="<?php asset('../app/resources/concept/assets/vendor/datatables/js/dataTables.select.min.js') ?>"></script>
-        <script src="<?php asset('../app/resources/concept/assets/vendor/datatables/js/dataTables.fixedHeader.min.js') ?>"></script>
+       
 
 </body>
 

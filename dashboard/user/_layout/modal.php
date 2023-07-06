@@ -13,15 +13,15 @@
                     <div class="row justify-content-center">
                         <div class="col-md-8">
                             <div class="form-group">
-                                <input class="form-control form-control-lg" type="text" name="name" placeholder="Nombre" autocomplete="off" data-inputmask-regex="(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?" id="name">
+                                <input class="form-control form-control-lg" type="text" name="name" placeholder="Nombre" data-inputmask-regex="(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?" id="name">
                                 <div class="invalid-feedback" id="error_name"></div>
                             </div>
                             <div class="form-group">
-                                <input class="form-control form-control-lg" type="email" name="email" placeholder="Email" autocomplete="off" id="email">
+                                <input class="form-control form-control-lg" type="email" name="email" placeholder="Email" id="email">
                                 <div class="invalid-feedback" id="error_email"></div>
                             </div>
                             <div class="form-group">
-                                <input class="form-control form-control-lg" type="text" name="telefono" placeholder="Teléfono" autocomplete="off" id="telefono">
+                                <input class="form-control form-control-lg" type="text" name="telefono" placeholder="Teléfono" id="telefono">
                                 <div class="invalid-feedback" id="error_telefono"></div>
                             </div>
                             <div class="form-group">
@@ -43,6 +43,7 @@
                                         <option value="0">Estandar</option>
                                         <option value="1">Administrador</option>
                                     </select>
+                                    <div class="invalid-feedback" id="error_role"></div>
                                 </div>
                             </div>
 

@@ -17,19 +17,37 @@
 
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="../dashboard-sales.html">Inicio</a>
+                                    <a class="nav-link" href="<?php asset('dashboard/perfil/') ?>">Perfil</a>
                                 </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="<?php asset('dashboard/prueba') ?>">Prueba</a>
+                                </li>
+
 
                             </ul>
                         </div>
                     </li>
 
 
+                    <!-- ***************************************************************************************************************** -->
 
+                    <li class="nav-divider">
+                        Administrador
+                    </li> 
+                    <li class="nav-item ">
+                        <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-1"><i class="fas fa-cog"></i>Configuración <span class="badge badge-success">6</span></a>
+                        <div id="submenu-2" class="collapse submenu">
+                            <ul class="nav flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="<?php asset('dashboard/user/') ?>">Usuarios</a>
+                                </li>
 
-                    <!-- <li class="nav-divider">
-                        Features
-                    </li> -->
+                            </ul>
+                        </div>
+                    </li>
+
+                   
 
                 </ul>
             </div>

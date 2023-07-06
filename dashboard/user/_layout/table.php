@@ -5,7 +5,7 @@
             <a class="toolbar" href="#" role="button" id="dropdownMenuLink5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="mdi mdi-dots-vertical"></i> </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink5">
                 <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModal">
-                     <i class="fas fa-user-plus"></i> Nuevo
+                    <i class="fas fa-user-plus"></i> Nuevo
                 </button>
             </div>
         </div>
@@ -21,45 +21,51 @@
                         <th scope="col">Teléfono</th>
                         <th scope="col">Role</th>
                         <th scope="col">Estatus</th>
-                        <th scope="col">Registro</th>
                         <th scope="col" style="width: 10%;"> </th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="text-center">
-                        <th scope="row">1</th>
-                        <td>Antonny Maluenga</td>
-                        <td>antonnymalu15gmail.com</td>
-                        <td>04121995647</td>
-                        <td>Administrador</td>
-                        <td>Activo</td>
-                        <td>22/06/2023</td>
-                        <td>
-                            <div class="btn-group btn-group-sm" role="group" aria-label="First group">
-                                <button type="button" class="btn btn-primary"><i class="m-r-7 mdi mdi-account-edit"></i></button>
-                                <button type="button" class="btn btn-primary"><i class="fas fa-cogs"></i></button>
-                                <button type="button" class="btn btn-primary"><i class="far fa-trash-alt"></i></button>
-                            </div>
-                        </td>
-                    </tr>
 
-                    <tr class="text-center">
-                        <th scope="row">2</th>
-                        <td>Manuel Peréz</td>
-                        <td>manuelgmail.com</td>
-                        <td>04124521963</td>
-                        <td>Usuario</td>
-                        <td>Activo</td>
-                        <td>22/06/2023</td>
-                        <td>
-                            <div class="btn-group btn-group-sm" role="group" aria-label="First group">
-                                <button type="button" class="btn btn-primary"><i class="m-r-7 mdi mdi-account-edit"></i></button>
-                                <button type="button" class="btn btn-primary"><i class="fas fa-cogs"></i></button>
-                                <button type="button" class="btn btn-primary"><i class="far fa-trash-alt"></i></button>
-                            </div>
-                        </td>
+                    <?php
+                    $i = 0;
+                    foreach ($auth->listarUsuarios as $usuario) {
+                        $i++;
+                    ?>
+                        <tr id="table_row_<?php echo $usuario['id']; ?>">
+                            <th scope="row"><?php echo $i; ?></th>
+                            <td id="table_nombre_<?php echo $usuario['id']; ?>">
+                                <?php echo $usuario['name'] ?>
+                            </td>
+                            <td id="table_email_<?php echo $usuario['id']; ?>">
+                                <?php echo $usuario['email'] ?>
+                            </td>
+                            <td class="text-center" id="table_telefono_<?php echo $usuario['id']; ?>">
+                                <?php echo $usuario['telefono'] ?>
+                            </td>
+                            <td class="text-center" id="table_role_<?php echo $usuario['id']; ?>">
+                                <?php
+                                if ($usuario['role'] < 1) {
+                                    echo 'Estandar';
+                                } else {
+                                    echo 'Administrador';
+                                }
+                                ?>
+                            </td>
+                            <td class="text-center" id="table_estatus_<?php echo $usuario['id']; ?>">
+                            <i class="fas fa-user text-success"></i>
+                            </td>
+                            <td>
+                                <div class="btn-group btn-group-sm" role="group" aria-label="First group">
+                                    <button type="button" class="btn btn-primary"><i class="m-r-7 mdi mdi-account-edit"></i></button>
+                                    <button type="button" class="btn btn-primary"><i class="fas fa-cogs"></i></button>
+                                    <button type="button" class="btn btn-primary"><i class="far fa-trash-alt"></i></button>
+                                </div>
+                            </td>
+                        </tr>
 
-                    </tr>
+                    <?php
+                    }
+                    ?>
                 </tbody>
 
             </table>

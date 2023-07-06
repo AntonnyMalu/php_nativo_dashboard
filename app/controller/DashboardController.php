@@ -1,14 +1,13 @@
 <?php
 namespace app\controller;
 
-use app\middleware\Auth;
+use app\middleware\Admin;
 
-class DashboardController extends Auth
+
+class DashboardController extends Admin
 {
-    public function isAmdin()
-    {
-        if (!$this->USER_ROLE) {
-            header('location: '. ROOT_PATH.'web\\');
-        }
+    public function index(){
+        $this->isAmdin();
+
     }
 }
