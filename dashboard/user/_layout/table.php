@@ -4,7 +4,7 @@
         <div class="dropdown ml-auto">
             <a class="toolbar" href="#" role="button" id="dropdownMenuLink5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="mdi mdi-dots-vertical"></i> </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink5">
-                <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModal">
+                <button type="button" class="btn btn-link" onclick="reset()" data-toggle="modal" data-target="#exampleModal">
                     <i class="fas fa-user-plus"></i> Nuevo
                 </button>
             </div>
@@ -24,7 +24,7 @@
                         <th scope="col" style="width: 10%;"> </th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="table_tbody">
 
                     <?php
                     $i = 0;
@@ -52,13 +52,24 @@
                                 ?>
                             </td>
                             <td class="text-center" id="table_estatus_<?php echo $usuario['id']; ?>">
-                            <i class="fas fa-user text-success"></i>
+                                <?php
+                                if ($usuario['estatus'] == 0) {
+                                    echo '<i class="fas fa-user-times"></i>';
+                                } else {
+                                    echo '<i class="fas fa-user text-success"></i>';
+                                }
+                                ?>
                             </td>
                             <td>
                                 <div class="btn-group btn-group-sm" role="group" aria-label="First group">
-                                    <button type="button" class="btn btn-primary"><i class="m-r-7 mdi mdi-account-edit"></i></button>
-                                    <button type="button" class="btn btn-primary"><i class="fas fa-cogs"></i></button>
-                                    <button type="button" class="btn btn-primary"><i class="far fa-trash-alt"></i></button>
+                                    <button type="button" class="btn btn-primary" onclick="edit(<?php echo $usuario['id'] ?>, <?php echo $i ?>)" 
+                                    data-toggle="modal" data-target="#exampleModal" <?php if($usuario['role'] == 100){ echo  ' disabled';} ?>>
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-primary"  <?php if($usuario['role'] == 100){ echo  ' disabled';} ?>><i class="fas fa-cogs"></i></button>
+                                    <button type="button" class="btn btn-primary" onclick="eliminar(<?php echo $usuario['id'] ?>)"  <?php if($usuario['role'] == 100){ echo  ' disabled';} ?>>
+                                        <i class="far fa-trash-alt"></i>
+                                    </button>
                                 </div>
                             </td>
                         </tr>

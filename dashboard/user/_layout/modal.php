@@ -5,7 +5,7 @@
             <form id="form_register">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Crear Usuario</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" onclick="reset()" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -53,7 +53,11 @@
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <input type="hidden" name="opcion" value="guardar" id="form_registrar_user">
+                    <input type="hidden" name="id" id="id">
+                    <input type="reset" class="d-none" value="borrar" id="btn_reset">
+                    <input type="hidden" name="item" id="input_item">
+                    <input type="button" class="btn btn-secondary" onclick="reset()" value="Cerrar" data-dismiss="modal" id="btn_modal_cerrar">
                     <button type="submit" class="btn btn-primary">Guardar</button>
                 </div>
             </form>

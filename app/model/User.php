@@ -13,6 +13,7 @@ class User extends Model
             'email',
             'password',
             'telefono',
+            'role',
             'created_at'
         ];
     }

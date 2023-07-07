@@ -15,8 +15,40 @@
                         <!-- ============================================================== -->
                         <!-- end breadcrumb  -->
                         <!-- ============================================================== -->
-
+                        <br>
+                        <br>
                         <ul>
+                            <?php
+                            $listarMenu = menu();
+                            foreach ($listarMenu as $menu) {
+                            ?>
+                                <li>
+                                    <?php echo $menu['titulo'] ?>
+                                    <ul>
+                                        <li>
+                                            <?php echo $menu['menu']['icono']; ?><?php echo $menu['menu']['modulo']; ?>
+
+                                            <ul>
+                                                <?php foreach ($menu['menu']['submenu'] as $submenu) {
+                                                ?>
+                                                    <li>
+                                                        <a href="<?php echo $submenu['url'] ?>"><?php echo $submenu['nombre'] ?></a>
+                                                    </li>
+                                                <?php
+                                                }
+                                                ?>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            <?php
+                            }
+                            ?>
+                        </ul>
+
+                        <br>
+                        <br>
+                        <!--   <ul>
                             <li>
                                 menu
                                 <ul>
@@ -46,7 +78,7 @@
                                 </ul>
                             </li>
 
-                        </ul>
+                        </ul> -->
 
 
                     </div>

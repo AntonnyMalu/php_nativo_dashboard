@@ -12,7 +12,8 @@
             "app\\middleware\\" : "app\\middleware"
         },
         "files": [
-            "app/funciones/funciones.php"
+            "app/funciones/funciones.php",
+            "app/funciones/menu.php"
         ]
     }
 }

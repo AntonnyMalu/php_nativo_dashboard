@@ -34,6 +34,7 @@ if ($_POST) {
                     $email,
                     $password,
                     $telefono,
+                    0,
                     $created_at
                 ];
 
