@@ -1,5 +1,6 @@
 <?php
 session_start();
+$modulo = "usuarios";
 require_once "../../vendor/autoload.php";
 use app\controller\UserController;
 $auth = new UserController();

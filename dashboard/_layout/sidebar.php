@@ -7,48 +7,46 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav flex-column">
-                    <li class="nav-divider">
-                        Menu
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success">6</span></a>
-                        <div id="submenu-1" class="collapse submenu">
-                            <ul class="nav flex-column">
+                    <!-- menu -->
+                    <?php
+                    if (!isset($modulo)) {
+                        # code...
+                        $modulo = null;
+                    }
+                    $listarMenu = menu($modulo);
+                    $i = 0;
+                    foreach ($listarMenu as $menu) {
+                        $i++;
+                    ?>
+                        <li class="nav-divider">
+                            <?php echo $menu['titulo'] ?>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link <?php if($menu['menu']['active']){ echo 'active'; } ?>" href="#" data-toggle="collapse" aria-expanded="<?php if($menu['menu']['active']){ echo 'true'; }else{ echo 'false'; } ?>" data-target="#submenu-<?php echo $i ?>" aria-controls="submenu-1">
+                                <?php echo $menu['menu']['icono']; ?><?php echo $menu['menu']['modulo']; ?>
+                                <!--<span class="badge badge-success">6</span> -->
+                            </a>
+                            <div id="submenu-<?php echo $i ?>" class="<?php if(!$menu['menu']['active']){ echo 'collapse'; }else{ echo 'collapse show'; } ?>" data-target="#submenu-<?php echo $i ?> submenu">
+                                <ul class="nav flex-column">
+                                    <?php foreach ($menu['menu']['submenu'] as $submenu) { ?>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link <?php if($submenu['active']){ echo 'active'; } ?>" href="<?php asset($submenu['url']) ?>">
+                                            <?php echo $submenu['icono'] ?>
+                                            <?php echo $submenu['nombre'] ?>
+                                        </a>
+                                        </li>
+
+                                    <?php } ?>
 
 
-                                <li class="nav-item">
-                                    <a class="nav-link" href="<?php asset('dashboard/perfil/') ?>">Perfil</a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link" href="<?php asset('dashboard/prueba') ?>">Prueba</a>
-                                </li>
-
-
-                            </ul>
-                        </div>
-                    </li>
-
-
-                    <!-- ***************************************************************************************************************** -->
-
-                    <li class="nav-divider">
-                        Administrador
-                    </li> 
-                    <li class="nav-item ">
-                        <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-1"><i class="fas fa-cog"></i>Configuración <span class="badge badge-success">6</span></a>
-                        <div id="submenu-2" class="collapse submenu">
-                            <ul class="nav flex-column">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="<?php asset('dashboard/user/') ?>">Usuarios</a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </li>
-
-                   
-
+                                </ul>
+                            </div>
+                        </li>
+                    <?php
+                    }
+                    ?>
+                    <!-- /menu -->
                 </ul>
             </div>
         </nav>

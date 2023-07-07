@@ -1,5 +1,6 @@
 <?php
 session_start();
+$modulo = "perfil";
 require_once "../../vendor/autoload.php";
 use app\controller\DashboardController;
 $auth = new DashboardController();

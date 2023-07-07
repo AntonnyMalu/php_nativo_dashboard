@@ -19,7 +19,7 @@
                         <br>
                         <ul>
                             <?php
-                            $listarMenu = menu();
+                            $listarMenu = menu($modulo);
                             foreach ($listarMenu as $menu) {
                             ?>
                                 <li>

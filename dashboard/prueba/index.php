@@ -1,9 +1,11 @@
 <?php
 session_start();
+$modulo = "prueba";
 require_once "../../vendor/autoload.php";
 use app\controller\DashboardController;
 $auth = new DashboardController();
 $auth->isAmdin();
+
 
 ?>
 <!doctype html>
