@@ -8,22 +8,26 @@ function menu($modulo)
     $usuarios = false;
     $_root = false;
     $prueba = false;
+    $parametros = false;
 
-    switch($modulo){
+    switch ($modulo) {
 
         case "perfil":
             $_dashboard = true;
             $perfil = true;
             break;
-         case "usuarios":
-                $_configuracion = true;
-                $usuarios = true;
-                break;
-                case "prueba":
-                    $_root = true;
-                    $prueba = true;
-                    break;
-                   
+        case "usuarios":
+            $_configuracion = true;
+            $usuarios = true;
+            break;
+        case 'parametros':
+            $_configuracion = true;
+            $parametros = true;
+            break;
+        case "prueba":
+            $_root = true;
+            $prueba = true;
+            break;
     }
 
 
@@ -49,7 +53,7 @@ function menu($modulo)
         [
             'titulo' => "Administrador",
             'menu' => [
-                'modulo' => "Configuraciòn",
+                'modulo' => "Configuración",
                 'icono' => '<i class="fas fa-cog"></i>',
                 'active' => $_configuracion,
                 'submenu' => [
@@ -57,30 +61,37 @@ function menu($modulo)
                         'nombre' => "Usuarios",
                         'url' => "dashboard/user",
                         'icono' => null,
-                        'active' => $usuarios
+                        'active' => $usuarios,
+                    ],
+
+                    [
+                        'nombre' => "Parametros",
+                        'url' => "dashboard/parametros",
+                        'icono' => null,
+                        'active' => $parametros
                     ]
 
                 ]
             ]
 
-                    ],
+        ],
+        [
+            'titulo' => 'ROOT',
+            'menu' => [
+                'modulo' => "TEST",
+                'icono' => '<i class="fa fa-fw fa-user-circle"></i>',
+                'active' => $_root,
+                'submenu' => [
                     [
-                        'titulo' => 'ROOT',
-                        'menu' => [
-                            'modulo' => "TEST",
-                            'icono' => '<i class="fa fa-fw fa-user-circle"></i>',
-                            'active' => $_root,
-                            'submenu' => [
-                                [
-                                    'nombre' => "Prueba",
-                                    'url' => "dashboard/prueba",
-                                    'icono' => null,
-                                    'active' => $prueba
-                                ]
-                            ]
-                        ]
-            
-                    ],
+                        'nombre' => "Prueba",
+                        'url' => "dashboard/prueba",
+                        'icono' => null,
+                        'active' => $prueba
+                    ]
+                ]
+            ]
+
+        ],
 
     ];
     return $menu;
