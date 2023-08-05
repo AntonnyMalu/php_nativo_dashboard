@@ -4,7 +4,7 @@
     </div>
     <div class="card-body">
 
-    <form id="form_register" method="post">
+    <form id="form_register_parametro">
 
         <div class="form-group">
             <label>Nombre</label>
@@ -24,7 +24,7 @@
             <div class="invalid-feedback" style="width: 100%;" id="error_valor"> </div>
         </div>
 
-        <a href="procesar.php" class="btn btn-primary float-right ml-1">Guardar</a>
+        <button type="submit" class="btn btn-primary float-right ml-1">Guardar</button>
         <button type="reset" class="btn btn-danger float-right" id="btn_cancelar">Cancelar</button>
 
     </form>

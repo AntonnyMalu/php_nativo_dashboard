@@ -18,6 +18,32 @@ function generar_string_aleatorio($largo = 10, $espacio = false) {
     return $string;
 }
 
+//Leer JSON
+function leerJson($json, $key)
+{
+    if ($json == null) {
+        return null;
+    } else {
+        $json = $json;
+        $json = json_decode($json, true);
+        if (array_key_exists($key, $json)) {
+            return $json[$key];
+        } else {
+            return null;
+        }
+    }
+}
+
+//Crear JSON
+function crearJson($array)
+{
+    $json = array();
+    foreach ($array as $key){
+        $json[$key] = true;
+    }
+    return json_encode($json);
+}
+
 
 //**************************************************************** */
 

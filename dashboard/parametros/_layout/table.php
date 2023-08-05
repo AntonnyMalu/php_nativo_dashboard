@@ -33,18 +33,16 @@
                                 <?php echo $parametro['valor'] ?>
                             </td>
                            
-                           <!-- <td>
+                            <td>
                                 <div class="btn-group btn-group-sm" role="group" aria-label="First group">
-                                    <button type="button" class="btn btn-primary" onclick="edit(<?php echo $usuario['id'] ?>, <?php echo $i ?>)" 
-                                    data-toggle="modal" data-target="#exampleModal" <?php if($usuario['role'] == 100){ echo  ' disabled';} ?>>
+                                    <button type="button" class="btn btn-primary">
                                         <i class="fas fa-edit"></i>
                                     </button>
-                                    <button type="button" class="btn btn-primary"  <?php if($usuario['role'] == 100){ echo  ' disabled';} ?>><i class="fas fa-cogs"></i></button>
-                                    <button type="button" class="btn btn-primary" onclick="eliminar(<?php echo $usuario['id'] ?>)"  <?php if($usuario['role'] == 100){ echo  ' disabled';} ?>>
+                                    <button type="button" class="btn btn-primary">
                                         <i class="far fa-trash-alt"></i>
                                     </button>
                                 </div>
-                            </td> -->
+                            </td>
                         </tr>
 
                    <?php

@@ -147,7 +147,7 @@ $('#form_register').submit(function (e) {
                         $('#error_email').text(data.message);
                     }
 
-                    if (password.val().length <= 0 && data.error != "no_cambios" && data.error != "email_duplicado") {
+                    if (password.val().length <= 0 && data.error !== "no_cambios" && data.error !== "email_duplicado") {
                         // condicion = false;
                         password.addClass('is-invalid');
                         $('#error_password').text('La contraseña es obligatoria.');
@@ -180,6 +180,7 @@ $('#form_register').submit(function (e) {
 
 function edit(id, item) {
     reset();
+    $('#exampleModalLabel').text('Editar Usuario');
     $.ajax({
         type: "post",
         url: "procesar.php",
@@ -229,6 +230,7 @@ function reset() {
     $('#telefono').removeClass('is-invalid');
     $('#password').removeClass('is-invalid');
     $('#role').removeClass('is-invalid');
+    $('#exampleModalLabel').text('Crear Usuario');
 }
 
 function eliminar(id) {
