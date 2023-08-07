@@ -35,10 +35,10 @@
                            
                             <td>
                                 <div class="btn-group btn-group-sm" role="group" aria-label="First group">
-                                    <button type="button" class="btn btn-primary">
+                                    <button type="button" class="btn btn-primary" onclick="edit(<?php echo $parametro['id'] ?>)"  >
                                         <i class="fas fa-edit"></i>
                                     </button>
-                                    <button type="button" class="btn btn-primary">
+                                    <button type="button" class="btn btn-primary" onclick="borrar(<?php echo $parametro['id']; ?>)">
                                         <i class="far fa-trash-alt"></i>
                                     </button>
                                 </div>
