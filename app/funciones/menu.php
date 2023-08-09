@@ -3,12 +3,15 @@
 function menu($modulo)
 {
     $_dashboard = false;
+    $_tecnologia = false;
+    $oficios = false;
     $perfil = false;
     $_configuracion = false;
     $usuarios = false;
     $_root = false;
     $prueba = false;
     $parametros = false;
+    $oficios = false;
 
     switch ($modulo) {
 
@@ -16,6 +19,7 @@ function menu($modulo)
             $_dashboard = true;
             $perfil = true;
             break;
+
         case "usuarios":
             $_configuracion = true;
             $usuarios = true;
@@ -27,6 +31,11 @@ function menu($modulo)
         case "prueba":
             $_root = true;
             $prueba = true;
+            break;
+
+        case "oficios":
+            $_tecnologia = true;
+            $oficios = true;
             break;
     }
 
@@ -50,6 +59,24 @@ function menu($modulo)
             ]
 
         ],
+
+        [
+            'titulo' => "tecnologia",
+            'menu' => [
+                'modulo' => "Equipos",
+                'icono' => '<i class="fa fa-fw fa-desktop"></i>',
+                'active' => $_tecnologia,
+                'submenu' => [
+                    [
+                        'nombre' => "Oficios",
+                        'url' => "dashboard/oficios",
+                        'icono' => '<i class="fas fa-file-alt"></i>',
+                        'active' => $oficios
+                    ]
+                ]
+            ]
+        ],
+
         [
             'titulo' => "Administrador",
             'menu' => [

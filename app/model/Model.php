@@ -108,7 +108,7 @@ class Model
         $campos = str_replace(", )exit", ")", $campos);
         $values = "(";
         foreach ($data as $input) {
-            if (empty($input)){
+            if (is_null($input)){
                 $values .= "NULL, ";
             }else{
                 $values .= "'$input', ";
